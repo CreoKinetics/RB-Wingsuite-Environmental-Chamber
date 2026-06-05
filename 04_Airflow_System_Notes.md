@@ -12,11 +12,98 @@ This implies roughly:
 - ~1,700 m3/h
 - ~1,000 CFM
 
-## Preferred technology
+Equivalent standard-density fan selection target used in fan selectors:
 
-Target high-pressure centrifugal/radial blower. Avoid treating low-pressure HVAC fans, carpet dryers, or leaf blowers as final solutions. Regenerative/side-channel blowers have high pressure but usually too little flow for a 100 mm test section.
+- ~1,745 m3/h at ~4,400-5,000 Pa static pressure
+- 20 C, sea level, density about 1.2 kg/m3
 
-## Current strongest selector candidates
+Density correction basis:
+
+- chamber density about 0.412 kg/m3
+- density ratio 0.412 / 1.2 = 0.343
+- 4,400 Pa at 1.2 kg/m3 is about 1.51 kPa at chamber density
+- 5,062 Pa at 1.2 kg/m3 is about 1.74 kPa at chamber density
+
+## Current direction update
+
+Industrial blowers that meet the pressure/flow target are becoming physically large and introduce pressure-boundary, motor cooling and packaging issues. EDF options are now being treated as a serious parallel path because high-performance EDFs may provide the required 100 mm-class velocity in a much smaller package, at the cost of high DC power, ESC cooling, continuous-duty uncertainty and rotor-containment requirements.
+
+## Preferred conventional technology
+
+For industrial blower route: high-pressure centrifugal/radial blower. Avoid treating low-pressure HVAC fans, carpet dryers, axial fans, or generic extraction fans as final solutions. Regenerative/side-channel blowers have high pressure but usually too little flow for a 100 mm test section.
+
+## EDF candidates
+
+### DS-51-DIA HST with DSM4341-1050
+
+Current strongest compact airflow candidate on paper.
+
+Supplier/spec screenshot values:
+
+- casing inside diameter: 93 mm
+- jet speed: 110 m/s
+- speed range: 39,500 rpm
+- total weight: 640 g
+- static thrust: 76 N
+- input power: 6.0 kW
+- overall efficiency: 70%
+
+Interpretation:
+
+- 110 m/s = about 214 kt TAS.
+- At chamber density 0.412 kg/m3, 110 m/s gives dynamic pressure of about 2.49 kPa.
+- Required 120 kt / 61.7 m/s dynamic pressure at chamber density is about 0.785 kPa.
+- Using thrust / jet speed gives mass flow about 0.69 kg/s.
+- At standard density this implies about 0.575 m3/s / 2,070 m3/h.
+- Through a 100 mm test section this corresponds to about 73 m/s / 142 kt, assuming the volumetric flow can be realised in the duct/test section.
+
+Status: most compelling EDF option so far. Need supplier confirmation on static/ducted rig use, continuous/semi-continuous duty, 24 kPa absolute operation, -55 C dry air/nitrogen suitability, ESC/power supply requirements, motor cooling, telemetry/protection and rotor containment.
+
+### DS-51-DIA HST with DSM4335-950
+
+Supplier/spec screenshot values:
+
+- casing inside diameter: 93 mm
+- fan swept area: 51 cm2 / 0.0051 m2
+- weight: 590 g
+- static thrust: 41-59 N
+- exhaust speed: 82-98 m/s
+- RPM: 29,300-34,800 rpm
+- input power: 2.4-4.1 kW
+- battery: 10-12S 4500 mAh LiPo
+- efficiency: 70-71%
+
+Interpretation:
+
+- Implied sea-level volumetric flow from thrust/exhaust speed is roughly 1,500-1,800 m3/h.
+- Very close to the 100 mm target and especially close if test section is nearer 93 mm effective diameter.
+- Less margin than DSM4341-1050 but lower power and less severe electrically.
+
+Status: strong lower-power EDF candidate; ask supplier whether 950 kV or 1050 kV motor is better for static ducted chamber operation.
+
+### DS-215-DIA HST with DSM10066-290
+
+Supplier/spec screenshot values:
+
+- casing inside diameter: 195 mm
+- fan swept area: 215 cm2 / 0.0215 m2
+- weight: 3,400 g
+- static thrust: 215-250 N
+- exhaust speed: 84-98 m/s
+- RPM: 12,000-14,000 rpm
+- input power: 9.8-15.6 kW
+- recommended battery: 12-14S 20000 mAh LiPo
+- efficiency: 78%
+
+Interpretation:
+
+- Implied sea-level volumetric flow from thrust/exhaust speed is roughly 7,650 m3/h.
+- Aerodynamically more than enough, but physically/electrically much larger than required.
+- Input power 10-16 kW makes power supply, heat, safety and containment significant.
+
+Status: keep as high-power fallback or ask supplier to compare against DS-51; likely more than needed if DS-51 can operate reliably.
+
+## Current strongest conventional fan-selector candidates
 
 ### EV-APF561
 
@@ -25,7 +112,7 @@ Fan selector result:
 - Requested: 1,745 m3/h at 4,400 Pa static, 20 C at 0 m, density 1.2 kg/m3.
 - Returned: 1,872 m3/h at 5,062 Pa static, 2900 rpm.
 - Equivalent at chamber density 0.412 kg/m3: approximately 1,872 m3/h at 1.74 kPa static, assuming density scaling.
-- Current status: strongest calculator-matched industrial candidate so far; confirm curve, drive arrangement, motor power/voltage, price and lead time.
+- Current status: strongest calculator-matched industrial candidate so far; supplier contact/email drafted for price, lead time, curve, drive arrangement and any larger in-stock alternative.
 
 ### EV-MPR502
 
@@ -40,9 +127,21 @@ Fan selector result:
 
 Screenshot of APF range curve shows EV-APF561A/B at the lower end of the range and larger EV-APF632/711/802/901 families above it. Our 100 mm target point is approximately 1,745 m3/h / 1,027 CFM and 4,400 Pa / 17.7 inWG at catalogue density. EV-APF561 appears to cover this region, with the selector returning a slightly higher operating point. Larger APF models may give more margin but will increase motor power, size and cost.
 
+## Kongskilde TRL conveying blower route
+
+Kongskilde FRL/FEA/TRL data sheet reviewed. TRL blowers are proven conveying blowers for air supply/conveying/ventilation where high pressure is required. They are centrifugal blowers and not intended for corrosive gases; catalogue maximum air temperature is 70 C.
+
+Best candidates:
+
+- TRL 75: 5.5 kW, direct drive, 2900 rpm, 96 kg with motor. Interesting performance/size but direct-drive motor issue remains.
+- TRL 100: 7.5 kW, V-belt drive, motor 2900 rpm, rotor 3650 rpm, 129 kg with motor. Current preferred Kongskilde model to ask about due to belt drive and pressure capability.
+- TRL 150: 11 kW, V-belt drive, rotor 4200 rpm, 157 kg with motor. Stronger pressure margin but larger/more power.
+
+Status: supplier contact form/email drafted asking which of TRL 75/100/150 can provide approximately 1,745 m3/h at 4,400 Pa static at standard density; also asking static-pressure data, -55 C suitability, bare-shaft/motorless options, stock/lead time and cost.
+
 ## Airflow pressure-boundary architecture
 
-As fan size increases, a fully internal fan becomes less practical. Current preferred architecture to investigate is:
+As fan size increases, a fully internal fan becomes less practical. Current preferred conventional blower architecture to investigate is:
 
 ```text
 freezer/chamber pressure volume
@@ -54,7 +153,7 @@ freezer/chamber pressure volume
 
 The fan/blower impeller and scroll should be inside the low-pressure recirculation boundary, but the motor should preferably remain outside the pressure/cold boundary where possible.
 
-Belt drive or remote shaft drive is now a serious option because it allows:
+Belt drive or remote shaft drive is a serious option because it allows:
 
 - blower/impeller inside an external sealed low-pressure plenum;
 - motor outside at ambient pressure and temperature;
@@ -74,6 +173,17 @@ Key risks to resolve for remote/belt drive:
 
 Avoid relying on a standard industrial fan casing to hold vacuum unless the manufacturer explicitly confirms it. A purpose-built sealed blower box/plenum may be safer and more controllable.
 
+For EDF route, likely architecture is different:
+
+```text
+EDF in sealed recirculating duct/plenum
+-> short diffuser/settling section if needed
+-> 93-100 mm test section/nozzle
+-> return duct/plenum
+```
+
+ESC and power electronics should preferably remain outside cold/low-pressure boundary, with sealed motor phase/power/control feedthroughs.
+
 ## ACI VBW9 used candidate
 
 ACI VBW9-00114, with CMG SLA-90L-2 motor plate:
@@ -85,9 +195,18 @@ ACI VBW9-00114, with CMG SLA-90L-2 motor plate:
 
 This is VFD-friendly if run from a suitable 230 V single-phase input to 230 V three-phase output VFD, motor linked delta.
 
-VBW9 curve now found. At the project flow of approximately 1,745 m3/h / 1,027 CFM, the VBW9 curve shows roughly 4.4-4.6 inWG static pressure at catalogue density, equivalent to about 1.1 kPa at 1.2 kg/m3. Corrected to chamber density 0.412 kg/m3, this is only about 0.38 kPa for one fan. Two identical VBW9 units in series would be roughly 8.8-9.2 inWG / 2.2-2.3 kPa catalogue static, or about 0.75-0.79 kPa at chamber density before additional series/duct losses.
+VBW9 curve found. At the project flow of approximately 1,745 m3/h / 1,027 CFM, the VBW9 curve shows roughly 4.4-4.6 inWG static pressure at catalogue density, equivalent to about 1.1 kPa at 1.2 kg/m3. Corrected to chamber density 0.412 kg/m3, this is only about 0.38 kPa for one fan. Two identical VBW9 units in series would be roughly 8.8-9.2 inWG / 2.2-2.3 kPa catalogue static, or about 0.75-0.79 kPa at chamber density before additional series/duct losses.
 
-Conclusion: one VBW9 is too weak for the full 100 mm / 120 kt target. Two VBW9 in series may be useful for bench testing or reduced-diameter/lower-loss operation, but are likely still short of the desired 1.5 kPa class chamber-density pressure margin.
+Conclusion: one VBW9 is too weak for the full 100 mm / 120 kt target. Two VBW9 in series may be useful for bench testing or reduced-diameter/lower-loss operation, but are likely still short of the desired 1.5 kPa class chamber-density pressure margin. Do not buy as primary solution unless very cheap and useful for test/fallback.
+
+## Other rejected or marginal options
+
+- Teqnivent U/AP402: curve suggests only about 1.4-1.6 kPa catalogue static at 1,700 m3/h, about 0.5 kPa at chamber density; too small for full 100 mm target.
+- Soler & Palau CBT-N: direct-driven extraction fan range; largest CBT-130N is 1.1 kW / 1,910 m3/h max, low pressure near target flow; reject for main blower.
+- U/ARP 251-252: about 140 mmH2O / 1.37 kPa at target flow; too low.
+- Colasit CMVeco250/250-225: broad centrifugal family but curves shown only around 2.2-2.6 kPa max catalogue pressure; likely too low for full 100 mm target. Plastic cold suitability also uncertain.
+- Large axial/AHU/biomass/extraction fans: high volume but wrong pressure class.
+- FPZ regenerative/side-channel blower: high pressure but too low flow for 100 mm section.
 
 ## LMB aerospace fan route
 
@@ -115,12 +234,23 @@ Need before further design time:
 
 Consider interchangeable nozzle/test-section inserts. Reducing from 100 mm to 70-80 mm dramatically reduces required flow.
 
+A 93 mm effective EDF/test-section diameter is now plausible because the DS-51 casing ID is 93 mm and the required flow for 120 kt through 93 mm is about 0.419 m3/s / 1,510 m3/h.
+
 ## Search target
 
-Search for industrial centrifugal/radial blowers with roughly:
+For industrial fan route, search for blowers with roughly:
 
 - 1,700-2,000 m3/h at 4,000-5,000 Pa catalogue static pressure at density 1.2 kg/m3;
-- 4-5.5 kW motor likely, depending family/efficiency;
-- ~2800-3000 rpm;
+- 4-7.5 kW motor likely, depending family/efficiency;
+- ~2800-3000 rpm or higher impeller speed via belt;
 - usable VFD control;
 - preferably belt-drive or remote-drive option so motor can remain outside pressure/cold boundary.
+
+For EDF route, ask for:
+
+- static ducted performance, thrust/flow/pressure data;
+- continuous/semi-continuous duty ratings at 50/75/100% power;
+- low-pressure 24 kPa absolute suitability;
+- -55 C dry air/nitrogen suitability;
+- ESC, power supply, telemetry and cooling requirements;
+- rotor containment/safety recommendations for fixed test rig.
