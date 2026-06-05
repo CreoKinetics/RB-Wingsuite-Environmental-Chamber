@@ -16,6 +16,40 @@ This implies roughly:
 
 Target high-pressure centrifugal/radial blower. Avoid treating low-pressure HVAC fans, carpet dryers, or leaf blowers as final solutions. Regenerative/side-channel blowers have high pressure but usually too little flow for a 100 mm test section.
 
+## Airflow pressure-boundary architecture
+
+As fan size increases, a fully internal fan becomes less practical. Current preferred architecture to investigate is:
+
+```text
+freezer/chamber pressure volume
+-> short vacuum-rated duct
+-> external sealed blower/plenum box
+-> short vacuum-rated return duct
+-> chamber/test section
+```
+
+The fan/blower impeller and scroll should be inside the low-pressure recirculation boundary, but the motor should preferably remain outside the pressure/cold boundary where possible.
+
+Belt drive or remote shaft drive is now a serious option because it allows:
+
+- blower/impeller inside an external sealed low-pressure plenum;
+- motor outside at ambient pressure and temperature;
+- easier motor cooling;
+- easier VFD/motor selection;
+- reduced risk from TEFC motor cooling at 24 kPa absolute;
+- reduced heat rejection into the cold/low-pressure airflow loop.
+
+Key risks to resolve for remote/belt drive:
+
+- shaft penetration through pressure boundary;
+- rotating shaft seal leakage and wear;
+- bearing support/alignment;
+- belt slip/tension/guarding;
+- belt material and pulley suitability if any belt section is cold or low pressure;
+- ensuring the sealed plenum can withstand approximately 77 kPa external differential pressure without deformation.
+
+Avoid relying on a standard industrial fan casing to hold vacuum unless the manufacturer explicitly confirms it. A purpose-built sealed blower box/plenum may be safer and more controllable.
+
 ## Current best used candidate
 
 ACI VBW9-00114, with CMG SLA-90L-2 motor plate:
@@ -61,4 +95,5 @@ Search for industrial centrifugal/radial blowers with roughly:
 - 2-5 kPa catalogue pressure capability at standard density;
 - 2.2-5.5 kW motor;
 - ~2800-3000 rpm;
-- usable VFD control.
+- usable VFD control;
+- preferably belt-drive or remote-drive option so motor can remain outside pressure/cold boundary.
