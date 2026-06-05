@@ -74,7 +74,7 @@ Key risks to resolve for remote/belt drive:
 
 Avoid relying on a standard industrial fan casing to hold vacuum unless the manufacturer explicitly confirms it. A purpose-built sealed blower box/plenum may be safer and more controllable.
 
-## Current best used candidate
+## ACI VBW9 used candidate
 
 ACI VBW9-00114, with CMG SLA-90L-2 motor plate:
 
@@ -83,7 +83,11 @@ ACI VBW9-00114, with CMG SLA-90L-2 motor plate:
 - 440-480 V star, 60 Hz, 2.5 kW, 3395 rpm
 - bearing 6205-2RS-C3
 
-This is VFD-friendly if run from a suitable 230 V single-phase input to 230 V three-phase output VFD, motor linked delta. Two identical VBW9 units in series remain an interesting low-cost pressure-increase experiment, but curve is unknown.
+This is VFD-friendly if run from a suitable 230 V single-phase input to 230 V three-phase output VFD, motor linked delta.
+
+VBW9 curve now found. At the project flow of approximately 1,745 m3/h / 1,027 CFM, the VBW9 curve shows roughly 4.4-4.6 inWG static pressure at catalogue density, equivalent to about 1.1 kPa at 1.2 kg/m3. Corrected to chamber density 0.412 kg/m3, this is only about 0.38 kPa for one fan. Two identical VBW9 units in series would be roughly 8.8-9.2 inWG / 2.2-2.3 kPa catalogue static, or about 0.75-0.79 kPa at chamber density before additional series/duct losses.
+
+Conclusion: one VBW9 is too weak for the full 100 mm / 120 kt target. Two VBW9 in series may be useful for bench testing or reduced-diameter/lower-loss operation, but are likely still short of the desired 1.5 kPa class chamber-density pressure margin.
 
 ## LMB aerospace fan route
 
