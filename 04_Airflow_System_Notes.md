@@ -16,6 +16,30 @@ This implies roughly:
 
 Target high-pressure centrifugal/radial blower. Avoid treating low-pressure HVAC fans, carpet dryers, or leaf blowers as final solutions. Regenerative/side-channel blowers have high pressure but usually too little flow for a 100 mm test section.
 
+## Current strongest selector candidates
+
+### EV-APF561
+
+Fan selector result:
+
+- Requested: 1,745 m3/h at 4,400 Pa static, 20 C at 0 m, density 1.2 kg/m3.
+- Returned: 1,872 m3/h at 5,062 Pa static, 2900 rpm.
+- Equivalent at chamber density 0.412 kg/m3: approximately 1,872 m3/h at 1.74 kPa static, assuming density scaling.
+- Current status: strongest calculator-matched industrial candidate so far; confirm curve, drive arrangement, motor power/voltage, price and lead time.
+
+### EV-MPR502
+
+Fan selector result:
+
+- Requested: 1,745 m3/h at 4,400 Pa static, 20 C at 0 m, density 1.2 kg/m3.
+- Returned: 1,746 m3/h at 4,407 Pa static, 2900 rpm.
+- Equivalent at chamber density 0.412 kg/m3: approximately 1,746 m3/h at 1.51 kPa static.
+- Current status: serious candidate but less margin than EV-APF561; may be attractive if cheaper/smaller/more available.
+
+### EV-APF range chart note
+
+Screenshot of APF range curve shows EV-APF561A/B at the lower end of the range and larger EV-APF632/711/802/901 families above it. Our 100 mm target point is approximately 1,745 m3/h / 1,027 CFM and 4,400 Pa / 17.7 inWG at catalogue density. EV-APF561 appears to cover this region, with the selector returning a slightly higher operating point. Larger APF models may give more margin but will increase motor power, size and cost.
+
 ## Airflow pressure-boundary architecture
 
 As fan size increases, a fully internal fan becomes less practical. Current preferred architecture to investigate is:
@@ -59,7 +83,7 @@ ACI VBW9-00114, with CMG SLA-90L-2 motor plate:
 - 440-480 V star, 60 Hz, 2.5 kW, 3395 rpm
 - bearing 6205-2RS-C3
 
-This is VFD-friendly if run from a suitable 230 V single-phase input to 230 V three-phase output VFD, motor linked delta.
+This is VFD-friendly if run from a suitable 230 V single-phase input to 230 V three-phase output VFD, motor linked delta. Two identical VBW9 units in series remain an interesting low-cost pressure-increase experiment, but curve is unknown.
 
 ## LMB aerospace fan route
 
@@ -91,9 +115,8 @@ Consider interchangeable nozzle/test-section inserts. Reducing from 100 mm to 70
 
 Search for industrial centrifugal/radial blowers with roughly:
 
-- 2,000-3,000 m3/h catalogue flow;
-- 2-5 kPa catalogue pressure capability at standard density;
-- 2.2-5.5 kW motor;
+- 1,700-2,000 m3/h at 4,000-5,000 Pa catalogue static pressure at density 1.2 kg/m3;
+- 4-5.5 kW motor likely, depending family/efficiency;
 - ~2800-3000 rpm;
 - usable VFD control;
 - preferably belt-drive or remote-drive option so motor can remain outside pressure/cold boundary.
