@@ -1,0 +1,24 @@
+Tag,Direction,Module,Signal_Type,Function,Feedback_Method,Notes
+DO_LN2_SOLENOID_MAIN,Output,NI 9475 or relay via NI 9481,24 VDC command,Main Gems LN2 solenoid,DI_LN2_SOLENOID_MAIN_FB or current sense,"24 VDC 15 W coil; drive via interposing relay/MOSFET/SSR"
+DO_LN2_SOLENOID_SPARE,Output,NI 9475 or relay via NI 9481,24 VDC command,Optional spare/stage-2 LN2 solenoid,DI_LN2_SOLENOID_SPARE_FB,Only if second solenoid used
+DO_PURGE_SOLENOID,Output,NI 9475 or relay via NI 9481,24 VDC command,Dry nitrogen purge inlet,DI_PURGE_SOLENOID_FB,TBD purge system
+DO_CHAMBER_VENT,Output,NI 9475 or relay via NI 9481,24 VDC command,Controlled chamber vent/backfill valve,DI_CHAMBER_VENT_FB,TBD chamber protection design
+DO_VAC_PUMP_ENABLE,Output,NI 9481 / contactor,dry contact or contactor coil,Vacuum pump enable,DI_VAC_PUMP_RUNNING,Use contactor aux and/or current feedback
+DO_BLOWER_ENABLE,Output,NI 9481 / VFD input,dry contact,VFD/blower enable,DI_BLOWER_RUNNING and DI_BLOWER_FAULT,VFD run/fault relays preferred
+DO_ALARM_BEACON,Output,NI 9475 or relay,24 VDC command,Warning beacon/buzzer,None or DI_ALARM_FB,Alarm indication
+DO_FREEZER_AUX_ENABLE,Output,TBD,relay/dry contact,Freezer auxiliary enable,TBD,Only if manufacturer wiring allows
+DI_ESTOP_OK,Input,NI 9421,24 VDC digital,E-stop chain healthy,N/A,Hardwired safety permissive input
+DI_O2_OK,Input,NI 9421,24 VDC digital,O2 monitor OK/alarm relay,N/A,Part of LN2 permissive chain
+DI_DOOR_CLOSED,Input,NI 9421,24 VDC digital,Chamber/freezer door or lid closed,N/A,Part of LN2 permissive chain
+DI_VAC_PUMP_RUNNING,Input,NI 9421,24 VDC digital,Vacuum pump running feedback,contactor aux/current sensor,Compare to DO_VAC_PUMP_ENABLE
+DI_BLOWER_RUNNING,Input,NI 9421,24 VDC digital,VFD run feedback,VFD relay,Compare to DO_BLOWER_ENABLE
+DI_BLOWER_FAULT,Input,NI 9421,24 VDC digital,VFD fault,VFD relay,Fault input
+DI_LN2_SOLENOID_MAIN_FB,Input,NI 9421,24 VDC digital,Main LN2 solenoid energised feedback,relay aux or current sense,Detect stuck relay/open coil
+DI_PURGE_SOLENOID_FB,Input,NI 9421,24 VDC digital,Purge solenoid feedback,relay aux or current sense,Detect fault
+DI_FREEZER_COMPRESSOR_RUNNING,Input,NI 9421 or analogue current,feedback/current,Freezer compressor running,current transducer preferred,Non-invasive preferred
+AI_CHAMBER_PRESSURE,Input,NI 9239,0-10 V,Keller 23SY absolute chamber pressure,N/A,0-1 bar abs, 0-10 V
+AI_PITOT_DP,Input,NI 9239,0-10 V,Dwyer MS-311 differential pressure,N/A,0-5 inWC / 0-1245 Pa
+AI_LN2_PRESSURE,Input,NI 9203,4-20 mA optional,LN2 manifold pressure transmitter,N/A,Optional; local gauge first
+TC_CHAMBER_AIR,Input,NI 9211,thermocouple,Chamber air temperature,N/A,Type T preferred
+TC_CAMERA_BODY,Input,NI 9211,thermocouple,Camera body temperature,N/A,Type T preferred
+TC_COIL_REGION,Input,NI 9211,thermocouple,LN2 coil/air outlet region,N/A,Type T preferred
