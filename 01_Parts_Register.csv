@@ -1,19 +1,25 @@
 Subsystem,Function,Part_or_Item,Supplier,Status,Qty,Cost,Links_or_Source,Notes
-LN2 source,Self-pressurising LN2 vessel,Statebourne Cryostor 60,Second hand / Statebourne support,Proceed/test/service,1,TBD,Statebourne serial support,"Statebourne recognises serial number; onsite service/checks available"
+LN2 source,Self-pressurising LN2 vessel,Statebourne Cryostor 60,Second hand / Statebourne support,Proceed/test/service,1,TBD,Statebourne serial support,"Statebourne recognises serial number; age not a concern per phone call; onsite service/checks and spares support available"
+LN2 source,Onsite service/check,Statebourne Cryostor 60 service,Statebourne,RFQ sent,1,TBD,Statebourne phone/email,"Ask for full functional check, vacuum/insulation condition, pressure-build/regulator, gauges, liquid/vent/fill valves, relief valve and burst disc"
 LN2 valve train,Cryogenic solenoid valve,Gems Sensors D2064-LN2-LU-C204,eBay Germany,Ordered,3,314.94 GBP shipped,Seller label / Gems datasheet,"24 VDC, 15 W, 1/8 in orifice, 375 PSI, LU=1/4-19 BSPT female, LN2 service"
-LN2 valve train,Thermal relief valve,HEROSE USS-06002.0200.0000,HEROSE,Selected/confirm order,2,TBD,HEROSE quote,"1.5 barG, 1/4 in BSPT male x 3/8 in BSPT female, PN63, brass, carbon-filled PTFE, oxygen cleaned, -196 to 150 C"
+LN2 valve train,Thermal relief valve,HEROSE USS-06002.0200.0000,HEROSE,Selected/confirm order,2,TBD,HEROSE quote,"1.5 barG, 1/4 in BSPT male x 3/8 in BSPT female ISO 7/1, PN63, brass, 6 mm orifice, carbon-filled PTFE seal, closed bonnet, oxygen cleaned, -196 to 150 C, PED marking"
 LN2 valve train,Cryogenic needle/metering valve,TBD,HEROSE or equivalent,RFQ sent,1,TBD,HEROSE follow-up,"1/4 in preferred; LN2 service; downstream flow trim after solenoid"
 LN2 valve train,Manual cryogenic shutoff/globe valve,TBD,HEROSE/Cash/RegO,RFQ sent,1,TBD,HEROSE follow-up,"Optional local rig isolation; Cryostor liquid valve can serve initial isolation"
 LN2 valve train,Local pressure gauge,TBD,HEROSE or gauge supplier,RFQ sent,1,TBD,HEROSE follow-up,"0-4 barG preferred, 0-6 barG acceptable"
-LN2 hose,Cryostor LN2 hose,Statebourne 3701004 or 3701006,Statebourne,RFQ sent,1,TBD,Statebourne accessories,"1/2 in BSP flexible stainless LN2 delivery hose, 1.2-1.5 m preferred"
+LN2 valve train,Cryogenic tees/adapters/reducers,TBD,HEROSE or cryogenic fittings supplier,RFQ sent,TBD,TBD,HEROSE follow-up,"Build short supported valve train from fittings, not custom manifold block initially; mostly BSPT/BSP preferred"
+LN2 hose,Cryostor LN2 hose,Statebourne 3701004 or 3701006,Statebourne,RFQ sent,1,TBD,Statebourne accessories,"1/2 in BSP flexible stainless LN2 delivery hose, 1.2-1.5 m preferred; ask about insulated hose and 9911009 inline relief tee advice"
+LN2 hose,Optional phase separator / dispense accessory,TBD Statebourne,Statebourne,Ask for advice,0-1,TBD,Statebourne accessories,"Useful for initial open dispensing/test filling only if recommended; not necessarily inline before sealed cooling coil"
 LN2 coil,Internal cooling coil tubing,1/4 in OD soft copper or 316/316L stainless,TBD,To source,10 m,TBD,TBD,"0.028-0.035 in / 0.7-0.9 mm wall; design 6-8 m installed; continuous tube, no internal joints"
 LN2 coil,Backup coil tubing,3/8 in OD copper or 316/316L stainless,TBD,Backup option,TBD,TBD,TBD,"Use only if 1/4 in proves too restrictive or easier to source"
 DAQ,Controller,NI cRIO-9068,Owned,Owned,1,,Project baseline,Main DAQ/control platform
 DAQ,Thermocouple input,NI 9211,Owned,Owned,3,,Project baseline,12 TC channels
+DAQ,Universal analogue input,NI 9219,Acquired bargain,Acquired,1,,User purchase,"Flexible spare/development module for RTD, thermocouple, voltage, current, resistance and bridge/strain-style experimental inputs"
 DAQ,0-10 V input,NI 9239,Purchased,Selected/purchased,1,,Project baseline,Keller and Dwyer signals
 DAQ,Current-loop input,NI 9203,Owned,Owned,1,,Project baseline,4-20 mA sensors
 DAQ,Digital output,NI 9475 / NI 9481,Owned,Owned,TBD,,Project baseline,Drive interposing relays/contacts only
 DAQ,Digital input,NI 9421,Owned,Owned,1,,Project baseline,24 V feedback inputs
-Airflow,Used centrifugal blower candidate,ACI VBW9-00114 with CMG SLA-90L-2 motor,eBay,Candidate,1-2,Offer TBD,eBay,"2.2 kW, 2830 rpm, 220-240 V delta, 380-415 V star; VFD friendly"
+Airflow,Used centrifugal blower candidate,ACI VBW9-00114 with CMG SLA-90L-2 motor,eBay,Candidate,1-2,Offer TBD,eBay,"2.2 kW, 2830 rpm, 220-240 V delta, 380-415 V star; VFD friendly; one unit likely too weak for full target but useful test/fallback"
+Airflow,Schubeler EDF candidate,DS-51-DIA HST + DSM4341-1050 + YGE Aureus 185,Schubeler,Engineering response pending,1,TBD,Schubeler email/manual,"Ask whether single fan is viable at 24 kPa/-55 C; low-volume MSRP expected; ask about long-life bearings, low-temp lubricant, strengthened blades, inlet ring, ESC battery-only issue"
 Airflow,Aerospace fan route,2 x LMB MX150-01,LMB,Cost/availability gated,2,TBD,LMB email,"May work if system loss around 1 kPa at 0.412 kg/m3; likely not enough for 2-3 kPa; request price/lead time"
+Airflow,EDF ESC,YGE Aureus 185,YGE/Schubeler,Recommended by Schubeler,TBD,TBD,YGE manual,"4-12S LiPo, 185 A class, temperature-controlled fan; manual says battery power only and power supplies not allowed; battery-to-ESC wire length <=30 cm unless extra ultra-low-ESR capacitors are used"
 Safety,Oxygen monitor,TBD industrial O2 detector,TBD,Open,1+,TBD,TBD,"Fixed O2 preferred; industrial personal detector acceptable lower-cost start; cheap Amazon unit not primary safety"
