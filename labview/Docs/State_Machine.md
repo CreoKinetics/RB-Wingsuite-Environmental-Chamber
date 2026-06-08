@@ -48,6 +48,13 @@ Allowed when:
 - No critical fault is active.
 - Operator has requested commissioning mode from HMI.
 
+### `Manual_Commissioning` to `Idle_Safe`
+
+Allowed when:
+
+- Operator exits commissioning mode from HMI, or manual key switch is disabled.
+- All manual outputs have been returned to their safe state.
+
 ### `Idle_Safe` to `Pre_Run_Check`
 
 Allowed when:
@@ -56,6 +63,13 @@ Allowed when:
 - Test profile is valid.
 - Required sensors are valid.
 - Safety chain is healthy.
+
+### `Pre_Run_Check` to `Idle_Safe`
+
+Allowed when:
+
+- Operator cancels automatic run, or run permissives cannot be satisfied.
+- Logging (if started) has been cleanly stopped.
 
 ### `Pre_Run_Check` to `Run_Profile`
 
@@ -75,6 +89,13 @@ Allowed when:
 
 - Profile requests hold segment, or chamber reaches defined tolerance band.
 
+### `Hold` to `Run_Profile`
+
+Allowed when:
+
+- Hold segment completes and the active profile advances to the next run segment.
+- Operator requests resume of automatic profile execution.
+
 ### `Run_Profile` or `Hold` to `Controlled_Warmup`
 
 Allowed when:
@@ -83,6 +104,13 @@ Allowed when:
 - Operator requests normal stop.
 - Non-critical condition requires controlled recovery.
 
+### `Controlled_Warmup` to `Idle_Safe`
+
+Allowed when:
+
+- Chamber conditions are within the defined safe/idle band.
+- Operator acknowledgement is recorded if required by the safety matrix.
+
 ### Any state to `Fault`
 
 Required when:
@@ -90,6 +118,8 @@ Required when:
 - Non-emergency fault occurs.
 - Sensor invalidity prevents safe automatic control.
 - Host comms timeout occurs in a state where operator confirmation is required.
+- Door/lid opens while in `Run_Profile` or `Hold` (automatic run must be inhibited).
+- Chamber pressure exceeds a non-critical software limit requiring a controlled stop.
 
 ### Any state to `Emergency_Stop`
 
@@ -97,7 +127,7 @@ Required when:
 
 - E-stop unhealthy.
 - Hard safety chain reports emergency state.
-- Critical pressure, oxygen, or watchdog fault requires immediate safe state.
+- Overpressure hardwired trip (e.g. `DI_OVERPRESSURE_OK` false) or other critical pressure/oxygen/watchdog fault requires immediate safe state.
 
 ### `Fault` to `Idle_Safe`
 
