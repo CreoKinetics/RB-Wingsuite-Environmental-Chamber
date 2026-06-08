@@ -1,6 +1,6 @@
 # Decision Log
 
-_Last updated: 2026-06-05_
+_Last updated: 2026-06-07_
 
 ## 2026-06-05
 
@@ -26,3 +26,7 @@ _Last updated: 2026-06-05_
 - Battery-run concept noted: Tattu Pro 14S 22 Ah 53.2 V pack has about 1.17 kWh nominal energy. At 6.267 kW VF-120-06 full-power draw, ideal runtime is about 11.2 minutes and practical full-power runtime likely 8-10 minutes. A 20 minute full-power run would require about 2.09 kWh before reserve, so likely two such packs or a higher-capacity/parallel battery arrangement.
 - EDF operational concept noted: low-speed running during cold soak may help keep motor/bearings warmer and verify system health before ramping to full power, but this needs supplier confirmation because low throttle may not adequately warm bearings and may still add heat to the chamber. Main-test duration must be matched to battery capacity and motor/ESC continuous-duty limits.
 - Control architecture: use cRIO outputs through interposing relays/contactors/SSR/MOSFET drivers; use feedback inputs for command/actual mismatch detection; LN2 enable requires hardwired safety permissive chain.
+
+## 2026-06-07
+
+- LMB MX150-01 route rejected/parked for this build on commercial and schedule grounds: ROM price is 28,765 EUR for 1 piece, lead time is 28 weeks at receipt of order, and LMB cannot meet the required two-week expectation.
