@@ -1,40 +1,102 @@
-<mxfile host="app.diagrams.net" version="24.7.17" type="device">
+<mxfile host="app.diagrams.net">
   <diagram id="PID-001" name="PID-001 LN2 Valve Train">
-    <mxGraphModel dx="1500" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1836" dy="1224" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="PID-001 - LN2 Valve Train Schematic - Draft A" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1"><mxGeometry x="40" y="20" width="900" height="40" as="geometry" /></mxCell>
-        <mxCell id="cryo" value="Statebourne Cryostor 60\nCRYO-101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1"><mxGeometry x="40" y="250" width="160" height="70" as="geometry" /></mxCell>
-        <mxCell id="v101" value="V-101\nIntegral liquid outlet valve" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1"><mxGeometry x="240" y="260" width="110" height="50" as="geometry" /></mxCell>
-        <mxCell id="h101" value="H-101\nStatebourne LN2 hose\n1/2 in BSP" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1"><mxGeometry x="390" y="250" width="125" height="70" as="geometry" /></mxCell>
-        <mxCell id="reducer" value="AD-101\nReducer\n1/2 in BSP to 1/4 in BSPT\nTBD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1"><mxGeometry x="550" y="250" width="140" height="70" as="geometry" /></mxCell>
-        <mxCell id="t101" value="T-101\nRelief tee" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1"><mxGeometry x="735" y="265" width="65" height="45" as="geometry" /></mxCell>
-        <mxCell id="t102" value="T-102\nGauge tee" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1"><mxGeometry x="875" y="265" width="65" height="45" as="geometry" /></mxCell>
-        <mxCell id="sv101" value="SV-101\nGems D2064-LN2-LU-C204\n24 VDC NC solenoid\n1/4-19 BSPT F x F" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="990" y="245" width="155" height="85" as="geometry" /></mxCell>
-        <mxCell id="t103" value="T-103\nOptional tee" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1190" y="265" width="70" height="45" as="geometry" /></mxCell>
-        <mxCell id="mv101" value="MV-101\nCryogenic metering valve\nTBD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1300" y="255" width="140" height="65" as="geometry" /></mxCell>
-        <mxCell id="hx101" value="HX-101\nInternal cooling coil\n1/4 in tube target" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1480" y="255" width="130" height="65" as="geometry" /></mxCell>
-        <mxCell id="vent101" value="VENT-101\nSafe external vent\nAlways open" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1650" y="255" width="130" height="65" as="geometry" /></mxCell>
-        <mxCell id="rv101" value="RV-101\nHEROSE USS-06002.0200.0000\n1.5 barG thermal relief\n1/4 BSPT M in / 3/8 BSPT F out\n6 mm orifice" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="690" y="105" width="180" height="100" as="geometry" /></mxCell>
-        <mxCell id="pi101" value="PI-101\nLocal pressure gauge\n0-4 or 0-6 barG\n1/4 BSP/BSPT target" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="860" y="130" width="105" height="75" as="geometry" /></mxCell>
-        <mxCell id="rv102" value="RV-102\nOptional downstream relief\nHEROSE 06002\n1.5 barG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1160" y="120" width="150" height="80" as="geometry" /></mxCell>
-        <mxCell id="line1" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="cryo" target="v101"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="line2" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="v101" target="h101"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="line3" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="h101" target="reducer"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="line4" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="reducer" target="t101"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="line5" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="t101" target="t102"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="line6" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="t102" target="sv101"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="line7" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="sv101" target="t103"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="line8" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="t103" target="mv101"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="line9" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="mv101" target="hx101"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="line10" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="hx101" target="vent101"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="branch1" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="t101" target="rv101"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="branch2" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="t102" target="pi101"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="branch3" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1" source="t103" target="rv102"><mxGeometry relative="1" as="geometry" /></mxCell>
-        <mxCell id="notes" value="Notes:\n- RV-101 protects the external section between V-101 and SV-101.\n- RV-102 is used if downstream hardware can isolate liquid.\n- Coil outlet path remains open to external vent.\n- Valve train to be mechanically supported.\n- Full detailed BOM is in diagrams/PID-001_LN2_Valve_Train_BOM.csv." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1"><mxGeometry x="40" y="500" width="650" height="135" as="geometry" /></mxCell>
-        <mxCell id="bomSummary" value="BOM summary:\nCRYO-101 Statebourne Cryostor 60 - service/check pending\nH-101 Statebourne 3701004/3701006 - 1/2 in BSP hose, 1.2-1.5 m\nAD-101 reducer - 1/2 in BSP to 1/4 in BSPT, TBD\nT-101 relief tee - 1/4 in BSPT run + 1/4 in BSPT branch, TBD\nRV-101 HEROSE 06002 - 1/4 in BSPT male inlet, 3/8 in BSPT female outlet, 6 mm orifice, 1.5 barG\nT-102 gauge tee - 1/4 in BSPT run + gauge branch, TBD\nPI-101 pressure gauge - 0-4 barG preferred / 0-6 barG acceptable\nSV-101 Gems D2064-LN2-LU-C204 - 1/4-19 BSPT female ports, 1/8 in orifice, 375 psi, 24 VDC 15 W\nT-103/RV-102 optional downstream relief - same HEROSE spec if installed\nMV-101 cryogenic metering valve - 1/4 in target, TBD\nHX-101 coil - 1/4 in OD copper or 316/316L stainless tube\nVENT-101 always-open safe external vent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;spacing=8;fontSize=11;" vertex="1" parent="1"><mxGeometry x="720" y="500" width="900" height="300" as="geometry" /></mxCell>
-        <mxCell id="titleBlock" value="Drawing: PID-001\nTitle: LN2 Valve Train Schematic\nProject: RB Wingsuite Environmental Chamber\nRevision: Draft A\nStatus: Working design" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" vertex="1" parent="1"><mxGeometry x="40" y="840" width="330" height="135" as="geometry" /></mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=24;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=10;" value="PID-001 - LN2 Valve Train Schematic - Draft A" vertex="1">
+          <mxGeometry height="40" width="900" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cryo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Statebourne Cryostor 60\nCRYO-101" vertex="1">
+          <mxGeometry height="70" width="160" x="40" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="v101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="V-101\nIntegral liquid outlet valve" vertex="1">
+          <mxGeometry height="50" width="110" x="240" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="h101" parent="1" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" value="H-101\nStatebourne LN2 hose\n1/2 in BSP" vertex="1">
+          <mxGeometry height="70" width="125" x="390" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="reducer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="AD-101\nReducer\n1/2 in BSP to 1/4 in BSPT\nTBD" vertex="1">
+          <mxGeometry height="70" width="140" x="550" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="t101" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="T-101\nRelief tee" vertex="1">
+          <mxGeometry height="45" width="65" x="735" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="t102" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="T-102\nGauge tee" vertex="1">
+          <mxGeometry height="45" width="65" x="875" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="sv101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="SV-101\nGems D2064-LN2-LU-C204\n24 VDC NC solenoid\n1/4-19 BSPT F x F" vertex="1">
+          <mxGeometry height="85" width="155" x="990" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="t103" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="T-103\nOptional tee" vertex="1">
+          <mxGeometry height="45" width="70" x="1190" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="mv101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="MV-101\nCryogenic metering valve\nTBD" vertex="1">
+          <mxGeometry height="65" width="140" x="1300" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="hx101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="HX-101\nInternal cooling coil\n1/4 in tube target" vertex="1">
+          <mxGeometry height="65" width="130" x="1480" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="vent101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="VENT-101\nSafe external vent\nAlways open" vertex="1">
+          <mxGeometry height="65" width="130" x="1650" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="rv101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="RV-101\nHEROSE USS-06002.0200.0000\n1.5 barG thermal relief\n1/4 BSPT M in / 3/8 BSPT F out\n6 mm orifice" vertex="1">
+          <mxGeometry height="100" width="180" x="677.5" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pi101" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="PI-101\nLocal pressure gauge\n0-4 or 0-6 barG\n1/4 BSP/BSPT target" vertex="1">
+          <mxGeometry height="75" width="105" x="855" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rv102" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=11;" value="RV-102\nOptional downstream relief\nHEROSE 06002\n1.5 barG" vertex="1">
+          <mxGeometry height="80" width="150" x="1150" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="line1" edge="1" parent="1" source="cryo" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="v101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line2" edge="1" parent="1" source="v101" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="h101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line3" edge="1" parent="1" source="h101" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="reducer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line4" edge="1" parent="1" source="reducer" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="t101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line5" edge="1" parent="1" source="t101" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="t102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line6" edge="1" parent="1" source="t102" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="sv101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line7" edge="1" parent="1" source="sv101" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="t103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line8" edge="1" parent="1" source="t103" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="mv101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line9" edge="1" parent="1" source="mv101" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="hx101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line10" edge="1" parent="1" source="hx101" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="vent101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="branch1" edge="1" parent="1" source="t101" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="rv101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="branch2" edge="1" parent="1" source="t102" style="endArrow=block;html=1;rounded=0;strokeWidth=2;" target="pi101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="branch3" edge="1" parent="1" source="t103" style="endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;" target="rv102">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="notes" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="Notes:\n- RV-101 protects the external section between V-101 and SV-101.\n- RV-102 is used if downstream hardware can isolate liquid.\n- Coil outlet path remains open to external vent.\n- Valve train to be mechanically supported.\n- Full detailed BOM is in diagrams/PID-001_LN2_Valve_Train_BOM.csv." vertex="1">
+          <mxGeometry height="135" width="650" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="bomSummary" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;spacing=8;fontSize=11;" value="BOM summary:\nCRYO-101 Statebourne Cryostor 60 - service/check pending\nH-101 Statebourne 3701004/3701006 - 1/2 in BSP hose, 1.2-1.5 m\nAD-101 reducer - 1/2 in BSP to 1/4 in BSPT, TBD\nT-101 relief tee - 1/4 in BSPT run + 1/4 in BSPT branch, TBD\nRV-101 HEROSE 06002 - 1/4 in BSPT male inlet, 3/8 in BSPT female outlet, 6 mm orifice, 1.5 barG\nT-102 gauge tee - 1/4 in BSPT run + gauge branch, TBD\nPI-101 pressure gauge - 0-4 barG preferred / 0-6 barG acceptable\nSV-101 Gems D2064-LN2-LU-C204 - 1/4-19 BSPT female ports, 1/8 in orifice, 375 psi, 24 VDC 15 W\nT-103/RV-102 optional downstream relief - same HEROSE spec if installed\nMV-101 cryogenic metering valve - 1/4 in target, TBD\nHX-101 coil - 1/4 in OD copper or 316/316L stainless tube\nVENT-101 always-open safe external vent" vertex="1">
+          <mxGeometry height="300" width="900" x="720" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="titleBlock" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacing=8;fontSize=12;" value="Drawing: PID-001\nTitle: LN2 Valve Train Schematic\nProject: RB Wingsuite Environmental Chamber\nRevision: Draft A\nStatus: Working design" vertex="1">
+          <mxGeometry height="135" width="330" x="40" y="840" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
