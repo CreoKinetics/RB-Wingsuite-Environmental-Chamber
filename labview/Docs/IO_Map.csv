@@ -1,0 +1,18 @@
+Tag,Subsystem,Signal_Type,Module_Slot,Module_Type,Channel,Engineering_Units,Scaling,Valid_Range,Fault_Range,Default_Safe_State,Used_By_Safety,Logged,Notes
+TC_CHAMBER_AIR_1,Chamber,Analogue input,TBD,Thermocouple,TBD,degC,Module thermocouple scaling,TBD,TBD,N/A,Yes,Yes,Primary chamber air temperature
+TC_CHAMBER_AIR_2,Chamber,Analogue input,TBD,Thermocouple,TBD,degC,Module thermocouple scaling,TBD,TBD,N/A,Yes,Yes,Secondary chamber air temperature / plausibility check
+TC_COIL_OUTLET,LN2,Analogue input,TBD,Thermocouple,TBD,degC,Module thermocouple scaling,TBD,TBD,N/A,No,Yes,LN2 coil outlet / performance diagnostic
+AI_CHAMBER_PRESSURE,Chamber,Analogue input,TBD,Voltage or current AI,TBD,bar or mbar,TBD,TBD,TBD,N/A,Yes,Yes,Chamber pressure transmitter
+AI_DIFF_PRESSURE_AIRFLOW,Airflow,Analogue input,TBD,Voltage or current AI,TBD,Pa,TBD,TBD,TBD,N/A,Yes,Yes,Airflow proof if differential pressure is used
+AI_OXYGEN_LEVEL,Safety,Analogue input,TBD,Voltage or current AI,TBD,percent O2,TBD,TBD,TBD,N/A,Yes,Yes,Required if LN2 can displace oxygen in occupied area
+DI_ESTOP_OK,Safety,Digital input,TBD,DI,TBD,boolean,True equals healthy,True/False,False,LN2 closed / fan safe,Yes,Yes,Prefer hardwired safety chain in addition to cRIO readback
+DI_DOOR_CLOSED,Safety,Digital input,TBD,DI,TBD,boolean,True equals closed,True/False,False,LN2 closed,Yes,Yes,Door or lid interlock
+DI_OVERPRESSURE_OK,Safety,Digital input,TBD,DI,TBD,boolean,True equals healthy,True/False,False,LN2 closed,Yes,Yes,Prefer independent hardwired cutout
+DI_FAN_HEALTHY,Airflow,Digital input,TBD,DI,TBD,boolean,True equals healthy,True/False,False,LN2 closed,Yes,Yes,Fan drive / ESC / blower health contact
+DI_MANUAL_KEY,Safety,Digital input,TBD,DI,TBD,boolean,True equals enabled,True/False,False,Manual disabled,Yes,Yes,Enables engineering commissioning controls
+DO_LN2_SOLENOID,LN2,Digital output,TBD,DO or relay,TBD,boolean,True equals energised open,N/A,N/A,False,Yes,Yes,Normally closed valve; all safety gating applies
+DO_FAN_ENABLE,Airflow,Digital output,TBD,DO or relay,TBD,boolean,True equals enabled,N/A,N/A,False,Yes,Yes,Fan enable or drive run command
+AO_FAN_SPEED_DEMAND,Airflow,Analogue output,TBD,AO,TBD,percent or volts,0-100 percent to output range,N/A,N/A,0 percent,No,Yes,Abstract fan demand independent of final hardware
+DO_STACKLIGHT_RED,Safety,Digital output,TBD,DO,TBD,boolean,True equals on,N/A,N/A,False,No,No,Fault indication
+DO_STACKLIGHT_AMBER,Safety,Digital output,TBD,DO,TBD,boolean,True equals on,N/A,N/A,False,No,No,Warning / commissioning indication
+DO_STACKLIGHT_GREEN,Safety,Digital output,TBD,DO,TBD,boolean,True equals on,N/A,N/A,False,No,No,Ready / running indication
