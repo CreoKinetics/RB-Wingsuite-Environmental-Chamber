@@ -11,7 +11,6 @@ _Last updated: 2026-06-07_
 - Reply to Schubeler/EDF supplier with bounded question: assess whether one DS-51-DIA HST package is viable; if not, recommend smallest suitable single-fan alternative. Include 24 kPa/-55 C duty, 93-100 mm test section, single-fan commercial constraint, long-life bearing, low-temperature lubricant, strengthened blade, inlet ring and YGE battery-supply questions.
 - Check YGE/Schubeler position on lab DC supply. YGE Aureus manual states ESC should only be powered by batteries and power supplies are not allowed; ask whether any approved lab rig supply arrangement exists.
 - Add NI 9219 to cRIO module inventory and update I/O allocation once sensor list stabilises.
-- Await/seek LMB budgetary cost, lead time, electrical/control details and two-week feasibility for MX150-01 fan route.
 - Contact EV/APF or Fans & Blowers supplier about EV-APF561 and EV-MPR502: price, lead time, full curve, motor/drive arrangement, and any larger suitable in-stock option.
 - Contact Kongskilde about TRL 75 / TRL 100 / TRL 150 suitability, stock/lead time, cost, static pressure at 1,700-1,800 m3/h, cold suitability and motorless/belt-drive options.
 
@@ -25,6 +24,10 @@ _Last updated: 2026-06-07_
 - Develop chamber purge/vent/overpressure protection layout.
 - Develop EDF electrical/safety concept if supplier response is favourable: battery and ESC mounting, LiPo storage and charging, fusing, sealed feedthroughs, interlocks, telemetry, rotor containment and emergency shutdown.
 - Develop conventional blower pressure-boundary concept if EV-APF/Kongskilde route is chosen: sealed plenum, duct penetrations, motor placement, belt/shaft seal if applicable, plenum structural check for chamber differential pressure.
+
+## Closed / parked
+
+- LMB MX150-01 route parked/rejected for this build: ROM 28,765 EUR per fan and 28-week lead time ARO; does not meet budget or schedule.
 
 ## Ongoing rules
 
