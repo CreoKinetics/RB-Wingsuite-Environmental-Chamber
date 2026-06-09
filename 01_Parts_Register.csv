@@ -11,10 +11,14 @@ LN2 hose,Cryostor LN2 hose,Statebourne 3701004 or 3701006,Statebourne,RFQ sent,1
 LN2 hose,Optional phase separator / dispense accessory,TBD Statebourne,Statebourne,Ask for advice,0-1,TBD,Statebourne accessories,"Useful for initial open dispensing/test filling only if recommended; not necessarily inline before sealed cooling coil"
 LN2 coil,Internal cooling coil tubing,1/4 in OD soft copper or 316/316L stainless,TBD,To source,10 m,TBD,TBD,"0.028-0.035 in / 0.7-0.9 mm wall; design 6-8 m installed; continuous tube, no internal joints"
 LN2 coil,Backup coil tubing,3/8 in OD copper or 316/316L stainless,TBD,Backup option,TBD,TBD,TBD,"Use only if 1/4 in proves too restrictive or easier to source"
+Purge/backfill,High-pressure gas regulator,APTech AP1510S 5P6 44400 SC 2725-0002,Found in office,Inventory candidate,1,0,Office inventory,"Gas regulator candidate for small nitrogen cylinder purge/backfill only; marked max inlet 3500 psi and max outlet 100 psi; body marked AN5B with 3 x HP ports and 2 x LP ports; has gas bottle fitting, several fittings, Millipore pressure gauge and PSI-Tronix digital gauge with 5-pin LEMO; not for LN2 liquid service"
+Instrumentation,Chamber absolute pressure sensor,Keller 23SY absolute pressure transmitter,TBD / existing selection,Selected,TBD,TBD,Project baseline / IO schedule,"0-1 bar absolute, 0-10 V output; primary chamber pressure measurement; connect to NI 9239; confirm exact part number, fitting and electrical connector before purchase/install"
+Instrumentation,Airflow differential pressure sensor,Dwyer MS-311 differential pressure transmitter,TBD / existing selection,Selected,TBD,TBD,Project baseline / IO schedule,"0-5 inWC / 0-1245 Pa, 0-10 V output; Pitot dynamic pressure measurement for airspeed; connect to NI 9239; confirm exact model suffix and port fittings"
+Instrumentation,LN2 manifold pressure transmitter,TBD 4-20 mA pressure transmitter,TBD,Optional / not yet selected,0-1,TBD,Project baseline / IO schedule,"Optional electronic LN2 manifold pressure measurement; local mechanical gauge first; likely 0-4 barG or 0-6 barG range if added; connect to NI 9203 or NI 9219"
 DAQ,Controller,NI cRIO-9068,Owned,Owned,1,,Project baseline,Main DAQ/control platform
 DAQ,Thermocouple input,NI 9211,Owned,Owned,3,,Project baseline,12 TC channels
 DAQ,Universal analogue input,NI 9219,Acquired bargain,Acquired,1,,User purchase,"Flexible spare/development module for RTD, thermocouple, voltage, current, resistance and bridge/strain-style experimental inputs"
-DAQ,0-10 V input,NI 9239,Purchased,Selected/purchased,1,,Project baseline,Keller and Dwyer signals
+DAQ,0-10 V input,NI 9239,Purchased,Selected/purchased,1,,Project baseline,"Keller 23SY chamber pressure and Dwyer MS-311 Pitot differential pressure signals"
 DAQ,Current-loop input,NI 9203,Owned,Owned,1,,Project baseline,4-20 mA sensors
 DAQ,Digital output,NI 9475 / NI 9481,Owned,Owned,TBD,,Project baseline,Drive interposing relays/contacts only
 DAQ,Digital input,NI 9421,Owned,Owned,1,,Project baseline,24 V feedback inputs
