@@ -48,6 +48,15 @@ Allowed when:
 - No critical fault is active.
 - Operator has requested commissioning mode from HMI.
 
+### `Manual_Commissioning` to `Idle_Safe`
+
+Allowed when:
+
+- Operator exits commissioning mode.
+- Manual key switch is disabled.
+- Commissioning task completes.
+- Safety manager confirms all hazardous outputs have returned to safe state.
+
 ### `Idle_Safe` to `Pre_Run_Check`
 
 Allowed when:
@@ -56,6 +65,14 @@ Allowed when:
 - Test profile is valid.
 - Required sensors are valid.
 - Safety chain is healthy.
+
+### `Pre_Run_Check` to `Idle_Safe`
+
+Allowed when:
+
+- Operator cancels or aborts the run request before automatic execution.
+- Any pre-run permissive is not met and the condition is not classified as a fault.
+- Logging/profile preparation fails safely before LN2 or automatic profile execution begins.
 
 ### `Pre_Run_Check` to `Run_Profile`
 
@@ -75,6 +92,15 @@ Allowed when:
 
 - Profile requests hold segment, or chamber reaches defined tolerance band.
 
+### `Hold` to `Run_Profile`
+
+Allowed when:
+
+- Hold dwell time has completed and the profile has a following segment.
+- Operator resumes automatic profile execution.
+- All run permissives remain valid.
+- cRIO confirms the next profile segment and setpoint ramp are valid.
+
 ### `Run_Profile` or `Hold` to `Controlled_Warmup`
 
 Allowed when:
@@ -82,6 +108,23 @@ Allowed when:
 - Profile completes.
 - Operator requests normal stop.
 - Non-critical condition requires controlled recovery.
+
+### `Controlled_Warmup` to `Idle_Safe`
+
+Allowed when:
+
+- Chamber temperature and pressure are within the defined safe idle band.
+- LN2 command is off and verified safe.
+- Fan/heater recovery outputs have been ramped down or parked in their idle-safe state.
+- Operator acknowledgement is complete if required by configuration.
+
+### `Run_Profile` or `Hold` to `Fault`
+
+Required when:
+
+- Door/lid opens during automatic running.
+- Fan proof is lost and the configured response is fault rather than controlled recovery.
+- A non-emergency safety condition requires automatic execution to stop.
 
 ### Any state to `Fault`
 
@@ -97,7 +140,7 @@ Required when:
 
 - E-stop unhealthy.
 - Hard safety chain reports emergency state.
-- Critical pressure, oxygen, or watchdog fault requires immediate safe state.
+- Critical overpressure, oxygen, or watchdog fault requires immediate safe state.
 
 ### `Fault` to `Idle_Safe`
 
@@ -114,6 +157,12 @@ Allowed when:
 - E-stop is restored.
 - Operator performs reset.
 - Outputs have remained in safe state.
+
+## Fault severity convention
+
+- `Fault` is used for non-emergency conditions where the cRIO can place the plant in a safe state and wait for acknowledgement.
+- `Emergency_Stop` is used for E-stop, hard safety chain trips, critical overpressure, critical oxygen depletion, watchdog failure, or any condition where hazardous outputs must be removed immediately.
+- Door-open during automatic running shall leave `Run_Profile` or `Hold`; output gating alone is not sufficient while remaining in an automatic-run state.
 
 ## Implementation notes
 
