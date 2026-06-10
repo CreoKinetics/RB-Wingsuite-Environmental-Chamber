@@ -1,6 +1,6 @@
 # Decision Log
 
-_Last updated: 2026-06-07_
+_Last updated: 2026-06-10_
 
 ## 2026-06-05
 
@@ -30,3 +30,10 @@ _Last updated: 2026-06-07_
 ## 2026-06-07
 
 - LMB MX150-01 route rejected/parked for this build on commercial and schedule grounds: ROM price is 28,765 EUR for 1 piece, lead time is 28 weeks at receipt of order, and LMB cannot meet the required two-week expectation.
+
+## 2026-06-10
+
+- Schubeler/EDF route strengthened as preferred airflow path pending quote. Francois/Schubeler recommends the DS-51-DIA HST with the most powerful 1050 kV motor variant for margin. They state 1000 Pa backpressure seems within reach but must be tested; 3000 Pa remains a test risk. Inlet lip is only needed if fan is collecting free/open air; if integrated into the duct, no inlet lip is required. YGE inverter comes pre-programmed for the fan; YGE programming adapter only needed if parameters must be changed.
+- Schubeler power architecture answer: safest/practical bench approach is a bidirectional power supply, but detailed setup advice requires their Lead Electronics Engineer, available next week at earliest. Do not finalise ESC/power architecture until this guidance is received.
+- Schubeler cold-prep options: strengthened blades, upgraded bearings, low-temperature lubricant and other preparation would add cost; supplier recommends reviewing these after initial tests to balance performance and cost.
+- Schubeler provisional lead time: about 7 days to shipping, subject to production confirmation. If quote is commercially acceptable, this route is now preferred over the conventional ACI blower path because ACI has 6-8 week lead time plus possible August closure and unresolved low-temperature/motor suitability.
